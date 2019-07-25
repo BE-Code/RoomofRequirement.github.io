@@ -23,6 +23,31 @@
 			#links {
 				display: none;
 			}
+			.3dText {
+				font-family: 'Lucida Grande', 'Helvetica Neue', sans-serif;
+				width: 100%;
+				font-size: 20px;
+				margin: 125px auto;
+				text-align: center;
+				color: #fff;
+				text-shadow: 0px 1px 1px #ddd,
+				             0px 2px 1px #d6d6d6,
+					     0px 3px 1px #ccc,
+					     0px 4px 1px #c5c5c5,
+					     0px 5px 1px #c1c1c1,
+					     0px 6px 1px #bbb,
+					     0px 7px 1px #777,
+					     0px 8px 3px rgba(100, 100, 100, 0.4),
+					     0px 9px 5px rgba(100, 100, 100, 0.1),
+					     0px 10px 7px rgba(100, 100, 100, 0.15),
+					     0px 11px 9px rgba(100, 100, 100, 0.2),
+					     0px 12px 11px rgba(100, 100, 100, 0.25),
+					     0px 13px 15px rgba(100, 100, 100, 0.3);
+				transition:all .8s ease-in-out;
+				-o-transition:all .8s ease-in-out;
+				-moz-transition:all .8s ease-in-out;
+				-webkit-transition:all .8s ease-in-out;
+			}
 		</style>
 		<script>
 			document.addEventListener('DOMContentLoaded', () => {
@@ -51,41 +76,41 @@
 					const key = event.key;
 					const currentTime = Date.now();
 					let buffer = [];
-// finish tabs					
-        if (currentTime - state.lastKeyTime > keystrokeDelay) {
-            buffer = [key];
-        } else {
-            buffer = [...state.buffer, key];
-        }
-
-        state = {buffer: buffer, lastKeyTime: currentTime};
-
-        callback(buffer);
-    });
-
-    function hasProperty(property, object) {
-        return object && object.hasOwnProperty(property);
-    }
-}
-
-
-function checkKonami(keySequence) {
-    //const userInput = keySequence.join('').toLowerCase();   // Case insensitive
-    const userInput = keySequence.join('');   // Case sensitive
-    const keySequences = {
-        'idfa': 'All Weapons + Ammo',
-        'idkfa': 'All Weapons + Ammo + Keys',
-        'idbeholds': 'Beserk Pack',
-        'idclev31': 'Bonus Level',
-        'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightab': 'Yay!!!'
-    };
-    const userInputDisplay = document.querySelector('#user_input');
-    userInputDisplay.textContent = userInput;
-
-    const cheatMessage = document.querySelector('#cheat_message');
-    cheatMessage.textContent = keySequences[userInput] || '';
-}
-</script>
+					
+					if (currentTime - state.lastKeyTime > keystrokeDelay) {
+						buffer = [key];
+					} else {
+						buffer = [...state.buffer, key];
+					}
+					
+					state = {buffer: buffer, lastKeyTime: currentTime};
+					
+					callback(buffer);
+				});
+				
+				function hasProperty(property, object) {
+					return object && object.hasOwnProperty(property);
+				}
+			}
+			
+			
+			function checkKonami(keySequence) {
+				//const userInput = keySequence.join('').toLowerCase();   // Case insensitive
+				const userInput = keySequence.join('');   // Case sensitive
+				const keySequences = {
+					'idfa': 'All Weapons + Ammo',
+					'idkfa': 'All Weapons + Ammo + Keys',
+					'idbeholds': 'Beserk Pack',
+					'idclev31': 'Bonus Level',
+					'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightab': 'Yay!!!'
+				};
+				const userInputDisplay = document.querySelector('#user_input');
+				userInputDisplay.textContent = userInput;
+				
+				const cheatMessage = document.querySelector('#cheat_message');
+				cheatMessage.textContent = keySequences[userInput] || '';
+			}
+		</script>
 	</head>
 	<body>
 		<div id="main">Welcome</div>
@@ -94,7 +119,7 @@ function checkKonami(keySequence) {
 			<a href="./boo">You've been Boo'd printable</a><br>
 			<a href="./load">The Loading Page</a><br>
 		</div>
-		<p id="user_input"></p>
-		<p id="cheat_message"></p>
+		<p id="user_input" class="3dText"></p>
+		<p id="cheat_message" class="3dText"></p>
 	</body>
 </html>
