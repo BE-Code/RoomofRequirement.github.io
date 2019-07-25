@@ -13,7 +13,7 @@
 				font-family: "Times New Roman";
 				font-weight: bold;
 				font-size: 2em;
-        text-align: center;
+				text-align: center;
 				color: Black;
 				background-color: #CDCDCDD3;
 				margin-left: auto;
@@ -24,6 +24,68 @@
 				display: none;
 			}
 		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				'use strict';
+				
+				const options = {
+					eventType: 'keydown',
+					keystrokeDelay: 2200
+				};
+				
+				keyMapper(checkKonami, options);
+			});
+			
+			
+			function keyMapper(callback, options) {
+				const delay = hasProperty('keystrokeDelay', options) && options.keystrokeDelay >= 300 && options.keystrokeDelay;
+				const keystrokeDelay = delay || 1000;
+				const eventType = hasProperty('eventType', options) && options.eventType || 'keydown';
+				
+				let state = {
+					buffer: [],
+					lastKeyTime: Date.now()
+				};
+				
+				document.addEventListener(eventType, event => {
+					const key = event.key;
+					const currentTime = Date.now();
+					let buffer = [];
+// finish tabs					
+        if (currentTime - state.lastKeyTime > keystrokeDelay) {
+            buffer = [key];
+        } else {
+            buffer = [...state.buffer, key];
+        }
+
+        state = {buffer: buffer, lastKeyTime: currentTime};
+
+        callback(buffer);
+    });
+
+    function hasProperty(property, object) {
+        return object && object.hasOwnProperty(property);
+    }
+}
+
+
+function checkKonami(keySequence) {
+    //const userInput = keySequence.join('').toLowerCase();   // Case insensitive
+    const userInput = keySequence.join('');   // Case sensitive
+    const keySequences = {
+        'idfa': 'All Weapons + Ammo',
+        'idkfa': 'All Weapons + Ammo + Keys',
+        'idbeholds': 'Beserk Pack',
+        'idclev31': 'Bonus Level',
+        'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightab': 'Yay!!!'
+    };
+    const userInputDisplay = document.querySelector('#user_input');
+    userInputDisplay.textContent = userInput;
+
+    const cheatMessage = document.querySelector('#cheat_message');
+    cheatMessage.textContent = keySequences[userInput] || '';
+}
+</script>
 	</head>
 	<body>
 		<div id="main">Welcome</div>
@@ -32,5 +94,7 @@
 			<a href="./boo">You've been Boo'd printable</a><br>
 			<a href="./load">The Loading Page</a><br>
 		</div>
+		<p id="user_input"></p>
+		<p id="cheat_message"></p>
 	</body>
 </html>
