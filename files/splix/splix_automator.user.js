@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Splix Automator
+// @name         Splibo
 // @namespace    roomofrequirement.gq
 // @version      0.1
 // @description  Splix.io mod to automate different patterns for domination
