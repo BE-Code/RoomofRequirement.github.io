@@ -75,13 +75,10 @@ function resetPatterns() {
         var curRank = 0;
         var totalRanks = 0;
         var numKills = 0;
-        setInterval(function(){
+        setInterval(function() {
             curRank = Number(document.getElementById("myRank").innerHTML);
             totalRanks = Number(document.getElementById("totalPlayers").innerHTML);
             numKills = Number(document.getElementById("myKills").innerHTML);
-        }, 1000);
-
-        setInterval(function() {
             document.title = (document.title.startsWith("Kills: ")) ? ("Rank: " + curRank + " / " + totalRanks) : ("Kills: " + numKills);
         }, 10000);
         //on death notify ("Your rank was " + x);
