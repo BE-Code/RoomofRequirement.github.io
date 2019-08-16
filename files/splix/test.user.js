@@ -31,6 +31,19 @@ function showHideElem(element) {
     window.addEventListener("load", function(){
 
 
+        // Scroll miniMap
+        var mouseWheelEvent= ((/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel");
+        document.body.addEventListener(mouseWheelEvent, WheelHandler, true);
+        var miniMap = document.getElementById("miniMap");
+
+        miniMap.style.marginTop = "0px";
+        function WheelHandler(event) {
+            var marginTop = parseInt(miniMap.style.marginTop, 10);
+            marginTop += (-10 * (event.wheelDelta / 120 || -event.detail || 0));
+            miniMap.style.marginTop = marginTop + "px";
+        }
+
+
         // Define Patterns
         setInterval(function(){
             if(boxPattern) {
