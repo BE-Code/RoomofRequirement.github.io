@@ -1,10 +1,5 @@
 var endpoint = "https://www.jsonstore.io/4854b44d8da280ff6d53fb4b66d7e536310bf40d793c9b8cee1675a34cba2336";
 
-function getrandom() {
-  var random_string = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
-  return random_string();
-}
-
 function geturl() {
   var url = document.getElementById("urlinput").value;
   var protocol_ok = url.startsWith("http://") || url.startsWith("https://") || url.startsWith("ftp://");
@@ -14,6 +9,14 @@ function geturl() {
   } else {
     return url;
   }
+}
+
+function getrandom() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  return text;
 }
 
 function genhash() {
@@ -37,35 +40,17 @@ function shorturl() {
   var longurl = geturl();
   genhash();
   send_request(longurl);
-  
-  var hashh = window.location.hash.substr(1);
-  if (window.location.hash != "") {
-    $.getJSON(endpoint + "/" + hashh, function (data) {
-      data = data["result"];
-      if (data != null) {
-        window.location.href = data;
-      }
-    });
-  }
 }
 
+var hashh = window.location.hash.substr(1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if (window.location.hash != "") {
+  $.getJSON(endpoint + "/" + hashh, function (data) {
+    data = data["result"];
+    
+    if (data != null) {
+      window.location.href = data;
+    }
+    
+  });
+}
