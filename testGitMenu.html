@@ -1,9 +1,18 @@
+<!--From tutorial at http://yonaba.github.io/2012/08/14/List-your-GitHub-projects-using-JavaScript-and-jQuery.md.html -->
 <html>
   <head>
     <title>Dynamic Menu Test</title>
   </head>
   <body>
     Hey.
+    <div id="my-github-projects"></div>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/files/git.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("#my-github-projects").loadRepositories("BE-Code");
+      });
+    </script>
   </body>
 </html>
