@@ -4,8 +4,9 @@ jQuery.githubUser = function(username, callback) {
   //key: "6dafcde3d401f90b17de05c78ff8bdfdd32de4d3"
 }
 
-jQuery.fn.loadRepositories = function(username) {
-  this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
+jQuery.fn.loadRepositories = function() {
+  var username = "BE-Code";
+  this.html("<span>Querying GitHub for repositories...</span>");
   var target = this;
   $.githubUser(username, function(data) {
     var repos = data.data; // JSON Parsing
