@@ -9,12 +9,12 @@ jQuery.fn.loadRepositories = function() {
   this.html("<span>Querying GitHub for sites...</span>");
   var target = this;
   $.githubUser(username, function(data) {
-    var fileList = data.data; // JSON Parsing
-    sortByName(fileList);    
+    //var fileList = data.data; // JSON Parsing
+    sortByName(data);    
     
     var list = $('<dl/>');
     target.empty().append(list);
-    $(fileList).each(function() {
+    $(data).each(function() {
       if (this.name.endsWith(".html")) {
         list.append("<dt><a href=\"roomofrequirement.gq/" + this.name.substring(0, this.name.length - 5) + "\">" + this.name.substring(0, this.name.length - 5) + "</a>");
         list.append("<dd>Size: " + this.size + "</dd>");
