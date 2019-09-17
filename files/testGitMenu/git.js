@@ -16,7 +16,7 @@ jQuery.fn.loadRepositories = function() {
     target.empty().append(list);
     $(data).each(function() {
       if (this.name.endsWith(".html")) {
-        list.append("<dt><a href=\"roomofrequirement.gq/" + this.name.substring(0, this.name.length - 5) + "\">" + this.name.substring(0, this.name.length - 5) + "</a>");
+        list.append("<dt><a href=\"" + this.name.substring(0, this.name.length - 5) + "\">" + this.name.substring(0, this.name.length - 5) + "</a>");
         list.append("<dd>Size: " + this.size + "</dd>");
       }
     });      
