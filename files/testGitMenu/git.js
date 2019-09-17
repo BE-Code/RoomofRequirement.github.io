@@ -6,7 +6,7 @@ jQuery.githubUser = function(username, callback) {
 
 jQuery.fn.loadRepositories = function() {
   var username = "BE-Code";
-  this.html("<span>Querying GitHub for repositories...</span>");
+  this.html("<span>Querying GitHub for sites...</span>");
   var target = this;
   $.githubUser(username, function(data) {
     var fileList = data.data; // JSON Parsing
@@ -16,7 +16,7 @@ jQuery.fn.loadRepositories = function() {
     target.empty().append(list);
     $(fileList).each(function() {
       if (this.name.endsWith(".html")) {
-        list.append('<dt><a href="roomofrequirement.gq/' + this.name.substring(0, this.name.length - 5) + '">' + this.name.substring(0, this.name.length - 5) + '</a>;
+        list.append("<dt><a href=\"roomofrequirement.gq/" + this.name.substring(0, this.name.length - 5) + "\">" + this.name.substring(0, this.name.length - 5) + "</a>";
         list.append('<dd>' + this.description +'</dd>');
       }
     });      
