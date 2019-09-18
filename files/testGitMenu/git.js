@@ -12,7 +12,7 @@ jQuery.fn.loadDynamicMenu = function() {
     var list = $("<ul>");
     target.empty().append(list);
     $(data).each(function() {
-      if (this.name.endsWith(".html")) {
+      if (this.name.endsWith(".html") && !this.name.startsWith("index")) {
         var page = this.name.substring(0, this.name.length - 5);
         list.append("<li><a href=\"" + page + "\">" + page + "</a></li>");
       }
