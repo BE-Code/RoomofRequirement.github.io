@@ -8,7 +8,7 @@ jQuery.fn.loadDynamicMenu = function() {
   var target = this;
   
   $.githubUser(function(data) {
-    sortByName(data);
+    //sortByName(data);
     var list = $("<ul>");
     target.empty().append(list);
     $(data).each(function() {
