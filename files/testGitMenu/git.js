@@ -8,7 +8,6 @@ jQuery.fn.loadDynamicMenu = function() {
   var target = this;
   
   $.githubUser(function(data) {
-    //sortByName(data);
     var list = $("<ul>");
     target.empty().append(list);
     $(data).each(function() {
@@ -19,10 +18,4 @@ jQuery.fn.loadDynamicMenu = function() {
     });
     list.append("</ul>");
   });
-
-  function sortByName(repos) {
-    repos.sort(function(a,b) {
-      return a.name - b.name;
-    });
-  }
 };
