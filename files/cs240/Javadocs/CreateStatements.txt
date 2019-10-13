@@ -1,0 +1,37 @@
+CREATE TABLE Users (
+	UserName varchar(255),
+	UserPass varchar(255),
+	Email varchar(255),
+	FirstName varchar(255),
+	LastName varchar(255),
+	Gender varchar(1),
+	PersonID varchar(255)
+);
+
+CREATE TABLE AuthTokens (
+	AuthTokenID varchar(255),
+	PersonID varchar(255)
+);
+
+CREATE TABLE Persons (
+	PersonID varchar(255),
+	AssociatedUsername varchar(255),
+	FirstName varchar(255),
+	LastName varchar(255),
+	Gender varchar(1),
+	FatherID varchar(255),
+	MotherID varchar(255),
+	SpouseID varchar(255)
+);
+
+CREATE TABLE Events (
+	EventID varchar(255),
+	AssociatedUsername varchar(255),
+	PersonID varchar(255),
+	Latitude varchar(255),
+	Longitude varchar(255),
+	Country varchar(255),
+	City varchar(255),
+	EventType varchar(255),
+	EventYear varchar(255)
+);
