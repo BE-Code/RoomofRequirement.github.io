@@ -6,12 +6,13 @@
 
 body {
   background: rgb(119,183,163);
-  background: linear-gradient(0deg, rgba(125,189,169,1) 40%,
-    rgba(108,163,144,1) 40%);
+  background: linear-gradient(0deg, rgba(125,189,169,1) 48%,
+    rgba(108,163,144,1) 48%);
+  background-attachment: fixed;
 }
 
 .container {
-  color: #333;
+  //color: #333;
   text-align: center;
   background-color: #476663;
 }
