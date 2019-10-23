@@ -15,9 +15,13 @@ let countDown = new Date('Nov 8, 2019 11:00:00').getTime(),
         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
       
       //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
+      if (distance <= 0) {
+        clearInterval(x);
+        document.getElementById("head").innerHTML = "We\'re Married!";
+        document.getElementById("days").innerHTML = 0;
+        document.getElementById("hours").innerHTML = 0;
+        document.getElementById("minutes").innerHTML = 0;
+        document.getElementById("seconds").innerHTML = 0;
+      }
 
     }, second)
