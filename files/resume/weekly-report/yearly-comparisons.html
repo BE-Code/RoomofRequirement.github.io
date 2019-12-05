@@ -1,0 +1,899 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+   $.ajax({
+      url: 'https://spreadsheets.google.com/feeds/list/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/23/public/values?alt=json',
+      dataType: 'json',
+      type: 'get',
+      cache: false,
+      success: function(data) {
+         $('#AvgSessionLengthTitle').html(data.feed.entry[0].gsx$metric.$t);
+         $('#AvgSessionLength').html(data.feed.entry[0].gsx$percentage.$t);
+         $('#ConversionRateTitle').html(data.feed.entry[1].gsx$metric.$t);
+         $('#ConversionRate').html(data.feed.entry[1].gsx$percentage.$t);
+         $('#TotalSessionsTitle').html(data.feed.entry[2].gsx$metric.$t);
+         $('#TotalSessions').html(data.feed.entry[2].gsx$percentage.$t);
+         $('#NewUsersTitle').html(data.feed.entry[3].gsx$metric.$t);
+         $('#NewUsers').html(data.feed.entry[3].gsx$percentage.$t);
+         $('#AverageCartSizeTitle').html(data.feed.entry[4].gsx$metric.$t);
+         $('#AverageCartSize').html(data.feed.entry[4].gsx$percentage.$t);
+         $('#UPTTitle').html(data.feed.entry[5].gsx$metric.$t);
+         $('#UPT').html(data.feed.entry[5].gsx$percentage.$t);
+         $('#RevenueTitle').html(data.feed.entry[6].gsx$metric.$t);
+         $('#Revenue').html(data.feed.entry[6].gsx$percentage.$t);
+         $('#ReturningUsersTitle').html(data.feed.entry[7].gsx$metric.$t);
+         $('#ReturningUsers').html(data.feed.entry[7].gsx$percentage.$t);
+      }
+   });
+</script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      $('.session_length_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var sessionLengthCircle = $('div.session_length_div').html();
+         $('div.centerCircle').html(sessionLengthCircle);
+         $('div.session_length_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var sessionLengthCircle = $('div.session_length_div').html();
+         $('div.centerCircle').html(sessionLengthCircle);
+         $('div.session_length_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.conversion_rate_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var conversionRateCircle = $('div.conversion_rate_div').html();
+         $('div.centerCircle').html(conversionRateCircle);
+         $('div.conversion_rate_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var conversionRateCircle = $('div.conversion_rate_div').html();
+         $('div.centerCircle').html(conversionRateCircle);
+         $('div.conversion_rate_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.total_sessions_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var totalSessionsCircle = $('div.total_sessions_div').html();
+         $('div.centerCircle').html(totalSessionsCircle);
+         $('div.total_sessions_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var totalSessionsCircle = $('div.total_sessions_div').html();
+         $('div.centerCircle').html(totalSessionsCircle);
+         $('div.total_sessions_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.average_cart_size_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var averageCartSizeCircle = $('div.average_cart_size_div').html();
+         $('div.centerCircle').html(averageCartSizeCircle);
+         $('div.average_cart_size_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var averageCartSizeCircle = $('div.average_cart_size_div').html();
+         $('div.centerCircle').html(averageCartSizeCircle);
+         $('div.average_cart_size_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.UPT_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var uPTCircle = $('div.UPT_div').html();
+         $('div.centerCircle').html(uPTCircle);
+         $('div.UPT_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var uPTCircle = $('div.UPT_div').html();
+         $('div.centerCircle').html(uPTCircle);
+         $('div.UPT_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.revenue_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var revenueCircle = $('div.revenue_div').html();
+         $('div.centerCircle').html(revenueCircle);
+         $('div.revenue_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var revenueCircle = $('div.revenue_div').html();
+         $('div.centerCircle').html(revenueCircle);
+         $('div.revenue_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.new_users_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var newUsersCircle = $('div.new_users_div').html();
+         $('div.centerCircle').html(newUsersCircle);
+         $('div.new_users_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var newUsersCircle = $('div.new_users_div').html();
+         $('div.centerCircle').html(newUsersCircle);
+         $('div.new_users_div').html(centerCircle);
+      });
+   });
+   $(document).ready(function() {
+      $('.returning_users_button').mouseenter(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var returningUsersCircle = $('div.returning_users_div').html();
+         $('div.centerCircle').html(returningUsersCircle);
+         $('div.returning_users_div').html(centerCircle);
+         //custom functions?
+      }).mouseleave(function() {
+         var centerCircle = $('div.centerCircle').html();
+         var returningUsersCircle = $('div.returning_users_div').html();
+         $('div.centerCircle').html(returningUsersCircle);
+         $('div.returning_users_div').html(centerCircle);
+      });
+   });
+</script>
+<script type="text/javascript">
+   google.charts.load('current', {'packages':['corechart']});
+   google.charts.setOnLoadCallback(drawSessionLengthChart);
+   google.charts.setOnLoadCallback(drawConversionRateChart);
+   google.charts.setOnLoadCallback(drawTotalSessionsChart);
+   google.charts.setOnLoadCallback(drawNewUsersChart);
+   google.charts.setOnLoadCallback(drawAverageCartSizeChart);
+   google.charts.setOnLoadCallback(drawUPTChart);
+   google.charts.setOnLoadCallback(drawRevenueChart);
+   google.charts.setOnLoadCallback(drawReturningUsersChart);
+   // Draw Graphs
+   function drawSessionLengthChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A13:C14');
+      query.send(handleQuerySessionLength);
+   }
+   function handleQuerySessionLength(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('session_length_chart'));
+      chart.draw(view, options);
+   }
+   function drawConversionRateChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A17:C18');
+      query.send(handleQueryConversionRate);
+   }
+   function handleQueryConversionRate(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('conversion_rate_chart'));
+      chart.draw(view, options);
+   }
+   function drawTotalSessionsChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A21:C22');
+      query.send(handleQueryTotalSessions);
+   }
+   function handleQueryTotalSessions(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('total_sessions_chart'));
+      chart.draw(view, options);
+   }
+   function drawAverageCartSizeChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A25:C26');
+      query.send(handleQueryAverageCartSize);
+   }
+   function handleQueryAverageCartSize(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('average_cart_size_chart'));
+      chart.draw(view, options);
+   }
+   function drawUPTChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A29:C30');
+      query.send(handleQueryUPT);
+   }
+   function handleQueryUPT(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('UPT_chart'));
+      chart.draw(view, options);
+   }
+   function drawRevenueChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A33:C34');
+      query.send(handleQueryRevenue);
+   }
+   function handleQueryRevenue(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('revenue_chart'));
+      chart.draw(view, options);
+   }
+   function drawNewUsersChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A37:C38');
+      query.send(handleQueryNewUsers);
+   }
+   function handleQueryNewUsers(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('new_users_chart'));
+      chart.draw(view, options);
+   }
+   function drawReturningUsersChart()
+   {
+      var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/1IC6f-BNOf156aJOVXBQP6QkGVw7JJDcX2qwnOK1_slQ/gviz/tq?gid=1216358062&range=A41:C42');
+      query.send(handleQueryReturningUsers);
+   }
+   function handleQueryReturningUsers(response)
+   {
+      var data = response.getDataTable();
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2,
+                       { calc: "stringify",
+                         sourceColumn: 2,
+                         type: "string",
+                         role: "annotation" }
+                      ]);
+      var options =
+      {
+         annotations: {
+            textStyle: {
+               /*fontName: 'Bodoni MT',*/
+               fontSize: 13
+            }
+         },
+         'colors': ['#4285F4', '#DB4437'],
+         'backgroundColor':'transparent',
+         vAxis: {
+            minValue: 0,
+            baselineColor: 'transparent',
+            format: 'm:ss',
+            textPosition: 'none',
+            gridlines: { color: 'transparent'},
+            minorGridlines: { color: 'transparent'}
+         },
+         legend:
+         {
+            position: 'none'
+         },
+         tooltip: {
+            isHtml: true,
+            trigger: 'none'
+         }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('returning_users_chart'));
+      chart.draw(view, options);
+   }
+</script>
+
+<style type="text/css">
+   h1
+   {
+      font-size: 2em;
+      margin-bottom: 30px;
+      position: absolute;
+      top: 126px;
+      left: 15px;
+   }
+   h3
+   {
+      color: black;
+      font-size: 15px;
+      margin-top: 900px;
+   }
+   .active
+   {
+      background-color: #B6D7A8;
+   }
+   .mynavbar
+   {
+      background-color: #f1f1f1;
+      position: absolute;
+      top: 76px;
+      right: 15px;
+   }
+   .mynavbar li a
+   {
+      color: black;
+      font-weight: bold;
+   }
+   .mynavbar li a:hover
+   {
+      background-color: #555;
+      color: white;
+   }
+   #dateFrame
+   {
+      position: absolute;
+      top: 191px;
+      right: 15px;
+   }
+   .centerCircle
+   {
+      border-radius: 50%;
+      width: 320px;
+      height: 320px;
+      background: transparent;
+      overflow: hidden;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 25px;
+      right: 0;
+      top: 458px;
+   }
+   .centerImage
+   {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 280px;
+   }
+   #instructionText
+   {
+      position: absolute;
+      top: 290px;
+      left: 30px;
+   }
+   .hidden_div
+   {
+      width: 0px;
+      height: 0px;
+      overflow: hidden;
+      position: absolute;
+   }
+   #lastYearLabel
+   {
+      color: black;
+      text-align: center;
+      background-color: #bec0c4;
+      height: 20px;
+      width: 86px;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: -85px;
+      right: 0px;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 240px;
+      bottom: 0px;
+   }
+   #thisYearLabel
+   {
+      color: black;
+      text-align: center;
+      background-color: #bec0c4;
+      height: 20px;
+      width: 86px;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0px;
+      right: -87px;
+      margin-top: auto;
+      margin-bottom: auto;
+      top: 240px;
+      bottom: 0px;
+   }
+   .chart
+   {
+      width: 450px;
+      height: 400px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      right: 65px;
+      bottom: 55px;
+   }
+   .AvgSessionLength
+   {
+      position: absolute;
+      width: 150px;
+      top: 675px;
+      left: 755px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .ConversionRate
+   {
+      position: absolute;
+      width: 125px;
+      top: 675px;
+      left: 280px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .TotalSessions
+   {
+      position: absolute;
+      width: 125px;
+      top: 815px;
+      left: 620px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .NewUsers
+   {
+      position: absolute;
+      width: 125px;
+      top: 350px;
+      left: 420px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .AverageCartSize
+   {
+      position: absolute;
+      width: 125px;
+      top: 495px;
+      left: 760px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .UPT
+   {
+      position: absolute;
+      width: 125px;
+      top: 830px;
+      left: 420px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .Revenue
+   {
+      position: absolute;
+      width: 125px;
+      top: 350px;
+      left: 620px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .ReturningUsers
+   {
+      position: absolute;
+      width: 125px;
+      top: 480px;
+      left: 280px;
+      text-align: center;
+      color: black;
+      cursor: pointer;
+   }
+   .metricTitle
+   {
+      font-size: 14pt;
+      font-family: arial;
+      font-weight: bold;
+      position: relative;
+   }
+   .percentage
+   {
+      font-size: 15pt;
+      font-family: arial;
+      position: relative;
+      top: 10px;
+   }
+   #explanationBox
+   {
+      text-align: left;
+      border-radius: 10%;
+      background-color: #B6D7A8;
+      width: 250px;
+      padding: 30px;
+      position: absolute;
+      right: 15px;
+      top: 800px;
+      color: black;
+   }
+</style>
+
+<ul class="nav navbar-nav navbar-right responsive-nav main-nav-list mynavbar">
+   <li><a href="http://brighamsbest.com/world-domination/weekly-report/glance/">At a Glance</a></li>
+   <li><a href="http://brighamsbest.com/world-domination/weekly-report/">Classic Stats</a></li>
+   <li><a class=active href="http://brighamsbest.com/world-domination/weekly-report/yearly-comparisons/">YOY</a></li>
+   <li><a href="http://brighamsbest.com/world-domination/">&lt;back</a></li>
+</ul>
+
+<h1>Weekly Report</h1>
+<iframe id="dateFrame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSRHxhuDwR4bEjVW7y-mh8xzni6C8MsPYvztNqw-muUp2imznWZPaU2VwE-xjWZj8sVAAoBjmNFPSBS/pubhtml?gid=1216358062&amp;single=true&amp;widget=false&amp;headers=false&amp;range=K47:N48&amp;chrome=false" frameborder="0" scrolling="no" height="100px" width="835px" align="right"></iframe>
+
+<!-- Image Map Generated by http://www.image-map.net/ -->
+<img src="http://brighamsbest.com/wp-content/uploads/2018/10/info-no-bg.png" alt="" width="808" class="centerImage" usemap="#image-map"/>
+<map name="image-map">
+    <area alt="cyan" class="returning_users_button" coords="234,329,239,289,259,242,284,210,180,105,136,157,111,207,94,262,87,327" shape="poly">
+    <area alt="teal" class="new_users_button" coords="295,200,323,177,362,159,413,152,412,3,354,7,298,23,240,52,189,95" shape="poly">
+    <area alt="blue" class="conversion_rate_button" coords="282,461,259,433,241,392,233,340,87,340,94,404,113,464,138,512,180,561" shape="poly">
+    <area alt="purple" class="UPT_button" coords="292,471,325,498,369,516,413,521,412,664,360,660,295,643,245,615,189,573" shape="poly">
+    <area alt="red" class="total_sessions_button" coords="425,521,467,516,509,499,546,471,650,574,603,611,551,640,491,659,425,667" shape="poly">
+    <area alt="orange" class="session_length_button" coords="554,461,578,430,597,386,603,340,750,341,744,404,726,463,701,512,657,563" shape="poly">
+    <area alt="yellow" class="average_cart_size_button" coords="603,327,595,280,578,240,553,210,658,105,702,155,732,213,746,268,751,328" shape="poly">
+    <area alt="green" class="revenue_button" coords="425,152,473,158,512,177,543,200,647,95,605,59,552,28,486,8,424,2" shape="poly">
+</map>
+
+<img src="http://brighamsbest.com/wp-content/uploads/2018/10/instruction-arrow.png" alt="" width="300px" id="instructionText"/>
+
+<div id="explanationBox">
+   Note:
+   Because this data comes from Google Analytics, it is only a measurement of online orders. All dates and values are based on order placement and not fulfillment.
+</div>
+
+<!-- Metrics and Percentages -->
+<div class="AvgSessionLength session_length_button">
+   <div class="metricTitle" id="AvgSessionLengthTitle"></div>
+   <div class="percentage" id="AvgSessionLength"></div>
+</div>
+<div class="ConversionRate conversion_rate_button">
+   <div class="metricTitle" id="ConversionRateTitle"></div>
+   <div class="percentage" id="ConversionRate"></div>
+</div>
+<div class="TotalSessions total_sessions_button">
+   <div class="metricTitle" id="TotalSessionsTitle"></div>
+   <div class="percentage" id="TotalSessions"></div>
+</div>
+<div class="NewUsers new_users_button">
+   <div class="metricTitle" id="NewUsersTitle"></div>
+   <div class="percentage" id="NewUsers"></div>
+</div>
+<div class="AverageCartSize average_cart_size_button">
+   <div class="metricTitle" id="AverageCartSizeTitle"></div>
+   <div class="percentage" id="AverageCartSize"></div>
+</div>
+<div class="UPT UPT_button">
+   <div class="metricTitle" id="UPTTitle"></div>
+   <div class="percentage" id="UPT"></div>
+</div>
+<div class="Revenue revenue_button">
+   <div class="metricTitle" id="RevenueTitle"></div>
+   <div class="percentage" id="Revenue"></div>
+</div>
+<div class="ReturningUsers returning_users_button">
+   <div class="metricTitle" id="ReturningUsersTitle"></div>
+   <div class="percentage" id="ReturningUsers"></div>
+</div>
+
+<!-- Bar Charts -->
+<div class="centerCircle">
+</div>
+<div class="session_length_div hidden_div">
+   <div class="chart" id="session_length_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="conversion_rate_div hidden_div">
+   <div class="chart" id="conversion_rate_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="total_sessions_div hidden_div">
+   <div class="chart" id="total_sessions_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="average_cart_size_div hidden_div">
+   <div class="chart" id="average_cart_size_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="UPT_div hidden_div">
+   <div class="chart" id="UPT_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="revenue_div hidden_div">
+   <div class="chart" id="revenue_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="new_users_div hidden_div">
+   <div class="chart" id="new_users_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+<div class="returning_users_div hidden_div">
+   <div class="chart" id="returning_users_chart"></div>
+   <div id="lastYearLabel">Last Year</div>
+   <div id="thisYearLabel">This Year</div>
+</div>
+
+<h3> *Estimated number of users (not sessions)<br><br>
+For problems, please e-mail byustore.geeks@gmail.com.</h3>
+Infographic source images:
+<a href='https://www.freepik.com/free-vector/round-infographic_714544.htm'>Designed by Freepik</a>
+<a href='https://www.freepik.com/free-vector/colorful-circle-infographic_1138712.htm'>Designed by Freepik</a>
+<a href='https://www.freepik.com/free-vector/pack-of-hand-drawn-arrows_2066856.htm'>Designed by Freepik</a>
