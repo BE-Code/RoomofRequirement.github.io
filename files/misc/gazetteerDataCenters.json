@@ -1,5 +1,12 @@
 [
   {
+    "key": "0",
+    "latitude": 38.8710,
+    "longitude": -77.0560,
+    "name": "Pentagon",
+    "provider": "Technica"
+  },
+  {
     "key": "nifi_amount_items_queued",
     "latitude": 38.8710,
     "longitude": -77.0560,
