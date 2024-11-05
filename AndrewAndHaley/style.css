@@ -19,9 +19,9 @@ body {
     Cantarell, 
     "Helvetica Neue", 
     sans-serif;
-
-    background: #fdf8ea;
-    background-attachment: fixed;
+  color: #9b7248;
+  background: #fdf8ea;
+  background-attachment: fixed;
 }
 
 h1 {
