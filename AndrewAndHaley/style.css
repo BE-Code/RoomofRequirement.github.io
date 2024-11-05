@@ -10,12 +10,6 @@ html, body {
 }
 
 body {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-family: -apple-system, 
     BlinkMacSystemFont, 
     "Segoe UI", 
@@ -37,19 +31,28 @@ h1 {
   color: white;
 }
 
-#content {
-  margin: auto;
+.flower {
+  position:absolute;
+  z-index: -1;
+}
+
+#flower1 {
+  top: -38vw;
+  left: -81vw;
+  width: 110vw;
+  rotate: 230deg;
 }
 
 .card {
   text-align: center;
   background: rgba(253, 248, 234, 75%);
-  border: 1px solid rgba(155, 114, 72, 75%);
+  border: 1px solid rgba(67, 60, 54, 0.75);
 
-  margin: 7rem;
+  margin: 3rem;
   max-width: 100vw;
   border-radius: 100px;
   overflow: clip;
+  padding: 2.5rem;
 }
 
 .card img {
