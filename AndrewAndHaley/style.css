@@ -75,3 +75,31 @@ h1 {
 .reception + .reception {
   border-left: solid 1px rgb(0, 0, 0);
 }
+
+#registry {
+  cursor: pointer;
+  outline: 0;
+  color: #FDF8E9;
+  background-color: #9b7248;
+  border-color: #9b7248;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#registry:hover {
+  color: #9b7248;
+  background-color: #FDF8E9;
+  border-color: #9b7248;
+}
+
+#registry a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
