@@ -4,45 +4,6 @@
   padding: 0;
 }
 
-body {
-  background: rgb(119,183,163);
-  background: linear-gradient(0deg, rgba(125,189,169,1) 48%,
-    rgba(108,163,144,1) 48%);
-  background-attachment: fixed;
-}
-
-.container {
-  /* color: #333; */
-  text-align: center;
-  background-color: #476663;
-}
-
-h1 {
-  font-size: 4.5em;
-  font-weight: 400px;
-  font-family: "Roboto Slab", serif;
-  color: white;
-}
-
-li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
-  font-family: "Roboto Slab", serif;
-  color: white;
-}
-
-li span {
-  display: block;
-  font-size: 4.5rem;
-}
-
-
-
-
-/* general styling */
 html, body {
   height: 100%;
   margin: 0;
@@ -64,8 +25,36 @@ body {
     Cantarell, 
     "Helvetica Neue", 
     sans-serif;
+
+    background: #fdf8ea;
+    background-attachment: fixed;
 }
 
-.container {
-  margin: 0 auto;
+h1 {
+  font-size: 4.5em;
+  font-weight: 400px;
+  font-family: "Roboto Slab", serif;
+  color: white;
+}
+
+#content {
+  margin: auto;
+}
+
+.card {
+  text-align: center;
+  background: rgba(253, 248, 234, 75%);
+  border: 1px solid rgba(155, 114, 72, 75%);
+
+  margin: 0 7rem;
+  max-width: 100vw;
+  border-radius: 100px;
+  overflow: clip;
+  box-shadow: 0 -0.5rem 1rem rgba(0 0 0 / 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
