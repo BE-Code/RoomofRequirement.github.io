@@ -50,7 +50,6 @@ h1 {
   max-width: 100vw;
   border-radius: 100px;
   overflow: clip;
-  box-shadow: 0 -0.5rem 1rem rgba(0 0 0 / 0.15);
 }
 
 .card img {
