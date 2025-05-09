@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetary Orbits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="orbitCanvas"></canvas>
+    <div class="controls">
+        <label for="fixedPlanetSelect">Center on:</label>
+        <select id="fixedPlanetSelect">
+            <option value="sun">Sun</option>
+            <option value="mercury">Mercury</option>
+            <option value="venus">Venus</option>
+            <option value="earth">Earth</option>
+            <option value="mars">Mars</option>
+            <option value="jupiter">Jupiter</option>
+            <option value="saturn">Saturn</option>
+            <option value="uranus">Uranus</option>
+            <option value="neptune">Neptune</option>
+            <option value="pluto">Pluto</option>
+        </select>
+    </div>
+    <div class="controls time-controls">
+        <label for="timeSpeedInput">Speed:</label>
+        <input type="range" id="timeSpeedInput" min="1" max="10000" step="1" value="101">
+        <output id="timeSpeedDisplay" class="control-value">2 weeks/sec</output>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script src="config.js"></script>
+    <script src="orbitCalculations.js"></script>
+    <script src="drawing.js"></script>
+    <script src="ui.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

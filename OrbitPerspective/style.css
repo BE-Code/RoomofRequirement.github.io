@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+canvas {
+    display: block;
+    background-color: #000000;
+}
+
+.controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(50, 50, 50, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.controls label {
+    margin-right: 5px;
+}
+
+.controls select {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+}
+
+#planetTooltip {
+    position: absolute;
+    display: none;
+    color: #ffffff;
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    pointer-events: none;
+    white-space: nowrap;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.time-controls {
+    top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.time-controls label {
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+
+.time-controls input[type="range"] {
+    width: 120px;
+    margin-left: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+}
