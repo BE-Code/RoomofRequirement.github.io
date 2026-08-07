@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Hugging Face Image Test</h2>
+
+<input id="token"
+       type="password"
+       placeholder="hf_...">
+
+<br><br>
+
+<textarea id="prompt" rows="5" cols="60">
+A 16-bit pixel art adventurer standing on a tiny island
+in the middle of the ocean. Retro SNES game style,
+crisp pixels, limited color palette.
+</textarea>
+
+<br><br>
+
+<button onclick="generate()">
+Generate
+</button>
+
+<p id="status"></p>
+
+<img id="image"
+     style="max-width:512px; image-rendering:pixelated;">
+
+
+<script type="module">
+
+import { InferenceClient } 
+from "https://cdn.jsdelivr.net/npm/@huggingface/inference@3/+esm";
+
+
+window.generate = async function() {
+
+    const token =
+        document.getElementById("token").value.trim();
+
+    const prompt =
+        document.getElementById("prompt").value;
+
+
+    const status =
+        document.getElementById("status");
+
+    const img =
+        document.getElementById("image");
+
+
+    status.textContent = "Generating...";
+
+
+    const hf = new InferenceClient(token);
+
+
+    try {
+
+        const result = await hf.textToImage({
+            provider: "fal-ai",
+            model: "black-forest-labs/FLUX.1-dev",
+            inputs: prompt
+        });
+
+
+        img.src =
+            URL.createObjectURL(result);
+
+        status.textContent =
+            "Done!";
+
+    }
+
+    catch(e) {
+
+        status.textContent =
+            e.message;
+
+        console.error(e);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
