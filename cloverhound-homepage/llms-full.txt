@@ -1,0 +1,222 @@
+# Cloverhound
+
+> Cloverhound is a contact center and collaboration technology company specializing in Cisco and Amazon Connect solutions. We build world-class customer experiences through cloud-based products, professional services, managed services, and custom software development for enterprise communications. Offices in Charlotte NC (HQ), Denver CO, and Costa Rica.
+
+## Products
+
+### Cloverhound Cloud
+
+Born in the cloud to meet modern business needs, the platform seamlessly integrates with Webex Calling and Webex Contact Center. It offers secure authentication and comprehensive audit trails, ensuring robust security and reliability.
+
+**Core Modules:**
+
+- **Analytics Module**: Comprehensive call detail records, call recording management, and advanced reporting capabilities for contact center performance insights.
+- **Campaign Manager**: Multi-channel campaign management with automated compliance handling and smart contact strategies for outbound campaigns.
+- **Operations Control Portal**: IVR and prompt management, schedule and holiday management, dynamic lookup tables, and a user-friendly interface for real-time operations management.
+- **Monitoring Module**: Automated IVR flow testing and flow tracking for visibility into customer interactions.
+
+**Core Benefits:**
+- Simplify day-to-day operations and transform data into actionable insights
+- Self-service platform with seamless Webex integration, set up in minutes
+- Enterprise-grade security: granular role-based access control, SOC 2 certified, comprehensive audit trails
+
+### Cloverhound Connect
+
+Meet today's increased demand for virtual services. Conduct business anywhere, at any time, safely and securely. All powered by Webex and Webex Messaging.
+
+**Industry Solutions:**
+- **Healthcare**: Virtual healthcare services with secure, HIPAA-compliant patient communication
+- **Courts**: Virtual court proceedings with secure, accessible communication for legal systems
+
+### Vigilus
+
+Vigilus is insightful, real-time contact center monitoring. The only monitoring solution purpose-built for Cisco Contact Centers.
+
+**Key Capabilities:**
+
+- **Legacy Alarm Monitoring**: Designed and built based on years of experience identifying, troubleshooting, and successfully resolving Contact Center issues.
+- **Troubleshooting**: Provides elastic search to quickly dig into logs, including CVP activity logs, across multiple devices in a single screen. Search for a customer's ANI and locate every relevant CCE log and IVR log instantaneously.
+- **24/7 IVR Monitoring**: Guarantees your IVR is functioning 24/7. Using state-of-the-art automatic speech recognition, Vigilus constantly calls your IVR to ensure both prompting and back-end systems are functioning.
+- **Interactive Dashboard**: A well-designed, fully-responsive, mobile-friendly, easy-to-read dashboard.
+
+**Benefits:**
+- Real-Time Status: Cisco Contact Center components, network connectivity, system performance, and active calls in real-time
+- Integration: Connect with CRM/TMS platforms like ServiceNow and Zendesk
+- Intuition: Identify problems before your customers do
+- Automation: Create tickets automatically with troubleshooting steps for engineering teams
+- Future Focused: Extend or integrate with any API easily
+- Support: Cloverhound's well-recognized customer service and support
+
+### Cloud Platform
+
+End-to-end Webex Contact Center visibility: call/IVR trace, session replay, network and browser telemetry, multi-tenant partner dashboard, ticketing integration, and predictive alerting.
+
+### OmniSuite
+
+Omni Suite is an omni-channel solution that complements Cisco Unified Contact Center Express by allowing agents to interact with customers on WhatsApp, Facebook Messenger, Twitter, and Telegram directly from the native chat interface of Finesse.
+
+**Components:**
+- **Omni Bot**: Smart virtual assistant using Google Dialogflow for natural language understanding, capable of automatically responding to common questions across WhatsApp, Facebook Messenger, and similar platforms.
+- **Omni Connector**: Bridge connecting platforms like WhatsApp and Facebook Messenger with Cisco contact centers. Supports both UCCX and UCCE platforms.
+- **Omni Context**: Tracks past customer interactions and provides agents with contextual information. Transmits complete conversation history between chatbot and customer to agents.
+- **Omni Video**: Escalate any customer interaction (phone or chat) to a video call.
+
+### Collab Suite
+
+A set of applications that complement Cisco's collaboration solution, specifically Cisco Unified Contact Center Express.
+
+**Applications:**
+- **Quality Manager**: Call recording and satisfaction survey modules for assessing phone interaction quality. Features agent improvement tools, call search, customer feedback collection, and data-driven differentiation.
+- **Collaboration Manager**: Level 1 support and management for Cisco Unified Communications Manager. Simplifies management, reduces expenses, implements call policies, and delegates CUCM tasks.
+- **Contact Center Manager**: Manage contact centers without technical expertise. Drag-and-drop IVR creation, audio recording with MP3 conversion, and customizable call routing rules.
+- **Live Stats**: Real-time data visualization for Cisco Unified Contact Center Express. Tracks performance, calculates service levels automatically, and provides color-coded queue status indicators.
+
+### Virtual Agents & CCAI
+
+Virtual agents powered by Google Dialogflow with Natural Language Processing (NLP) for human-like conversations.
+
+**Key Benefits:**
+- Google's top-tier AI technology for elevated customer conversations
+- Community of over 1.5 million developers
+- Improved Customer Satisfaction (CSAT) scores
+- 24/7 availability
+
+**Differentiators:**
+- Natural language understanding for user-friendly interactions
+- Backend integration for data collection and ownership verification
+- DTMF support for traditional input methods
+- Hub-and-spoke approach instead of rigid IVR tree structures
+
+**Integrations:** Cisco, Genesys, Five9, Amazon, Twilio
+
+### CTI Finesse Plug-in
+
+Drive agent efficiency to serve customers faster. Run Cisco Finesse Agent fully embedded in Salesforce and ServiceNow.
+
+**Integrations:**
+- **Salesforce**: Enhance customer experience and sales with follow-up, engagement and efficiency tools
+- **Ticketing Systems**: Adapt to your team's ticketing system of choice
+- **Zendesk**: Handle tickets with speed and accuracy
+- **ServiceNow**: Digital workflow integration and automation
+
+**Why Industry Leader:**
+- Automated screen-pop for improved agent accuracy
+- Finesse functionality embedded directly within ServiceNow and Salesforce
+- Intuitive click-to-call for streamlined outbound calls
+- Zero footprint: no additional equipment or software to install
+- Future-focused with Cloverhound's customer service and support
+
+## Services
+
+### Professional Services
+
+Contact center capabilities and unified communications consulting, implementation, and support.
+
+**Contact Center Capabilities:**
+- UCCE and UCCX capabilities including all Call Recording Solutions
+- Reporting packages (Exony, NICE, CUIC), web and email interaction
+- Self-service in CVP and UCCX/IP IVR
+- Outbound dialing: customer callback applications and custom dialing list processing modules for UCCE
+- Internal provisioning tools and scripts for automation of large deployments
+- Custom reporting for UCCE and UCCX with CUIC
+- Custom Finesse gadgets and advanced contact center audit configuration
+
+**Unified Communications & Video:**
+- Full product set support: Communications Manager, Unity Connections, IM & Presence
+- Full video capabilities: Telepresence with vTS, Conductor, VCS and Expressway
+- All mobile remote access projects including Expressway
+
+### Managed Services
+
+Comprehensive infrastructure management services with a three-pillar approach:
+
+- **People**: Skilled workforce bringing expertise, knowledge, and experience for technical support
+- **Processes**: Consistent and efficient task management for monitoring and support of IT services
+- **Products**: Technology solutions, software, and hardware utilized to deliver and support IT services
+
+### API Development & Integration
+
+Software development and IT infrastructure expertise for innovation and seamless customer experiences.
+
+**Service Areas:**
+- **Integration**: System integration using APIs and databases to connect and enhance multiple systems
+- **Automation**: Automation technologies to simplify complex processes, eliminate repetitive tasks, and enhance infrastructure efficiency
+- **Bespoke Development**: Custom solutions collaboratively designed for unique business needs
+- **Management**: Real-time information systems for faster, data-driven decision-making
+
+### Amazon Connect
+
+AI-enabled contact center on AWS. End-to-end consulting and managed services for Amazon Connect implementation.
+
+**How We Work:**
+1. Prepare: Discovery calls and demos/PoC
+2. Design: Statement of Work definition
+3. Implement: Agile methodology with integrations and training
+4. Customize: Bespoke enhancements
+5. Manage: Event & incident management, change management, optimization
+
+**AWS Services Leveraged:**
+- Omnichannel: Amazon Connect
+- Generative AI: Amazon Q, Amazon Lex, Amazon Bedrock
+- Serverless: AWS Lambda
+- Monitoring: CloudWatch
+- Messaging: AWS End User Messaging
+
+**Who We Serve:** B2C companies in Retail, Healthcare, Education, and Finance with multichannel customer support needs.
+
+## Partnerships
+
+### Cisco DSI Program
+
+The Cisco DSI Program is a deal acceleration initiative that empowers Cisco partners to deliver enhanced value by funding engagements with consultants (DSI partners).
+
+**Practice Areas:**
+- **Collaboration & Contact Center**: CUCM & UCCX/UCCE, WxC & WxCC, Webex Devices
+- **Security**: Breach Protection Suite, Cloud Protection Suite, User Protection Suite
+- **Programmability**: DNAC/ISE/Meraki Python and Go SDKs, Ansible collections, Terraform providers, DNAC Splunk Apps
+
+**Service Phases:**
+1. Preparation: PoC, PoV, assessments, training
+2. Design: Requirements workshops, high & low level designs, migration plans, gap analysis
+3. Implement: New projects, upgrades, migrations, UAT plans
+4. Manage: Adoption services, L2 & L3 support, incident & change management
+5. Customize: Third-party integration, network automation, Google CCAI, API customization
+
+## Industry Solutions
+
+### Healthcare
+
+Comprehensive patient dashboard solution compatible with Epic and Cerner systems, featuring an AI assistant, practitioner directory, admin settings, and HIPAA-compliant billing integrations.
+
+## Company
+
+### About
+
+We are trusted tech talent, customer service experts, innovators for the real world. A team that excels at the forefront of exploring and designing modern solutions that industries and businesses use every day — solutions that make processes more efficient and peoples' lives easier.
+
+**What We Do:**
+- **Contact Center**: Expertly trained custom development skill-sets with engineers focused solely on contact center solutions
+- **App Development**: API integrations built for connection and collaboration
+- **Unified Communications**: Full product set support, video capabilities, and remote access for integrated, agile collaboration
+
+**Why Cloverhound:**
+- Excel at creating custom solutions for Cisco Business Units
+- Proven proficiency in Cisco Ecosystem solutions
+- Expertise in software and networking integration
+- Full stack and mobile development capabilities
+
+### Offices
+
+- **Charlotte, NC** (Headquarters)
+- **Denver, CO**
+- **Costa Rica** (Curridabat, San Jose)
+
+### Contact
+
+- Website: https://cloverhound.com
+- Contact page: /get-in-touch
+
+## Legal
+
+- [Privacy Policy](/privacy-policy)
+- [EULA](/eula)

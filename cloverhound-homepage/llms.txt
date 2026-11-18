@@ -1,0 +1,50 @@
+# Cloverhound
+
+> Cloverhound is a contact center and collaboration technology company specializing in Cisco and Amazon Connect solutions. We offer cloud-based products (Cloverhound Cloud, Connect, Vigilus), professional services, managed services, and software development for enterprise communications.
+
+## Products
+
+- [Cloverhound Cloud](/cloud): Cloud-based contact center platform with analytics, campaign management, operations control, and monitoring modules
+- [Cloverhound Connect](/connect): Industry-specific contact center solutions for healthcare and courts
+- [Vigilus](/vigilus): Real-time monitoring platform for legacy alarm monitoring, troubleshooting, 24/7 IVR monitoring, and interactive dashboards
+- [Cloud Platform](/cloud-platform): Advanced cloud platform with integrations, security, and enterprise capabilities
+- [OmniSuite](/omni-suite): Omnichannel suite with OmniBot, OmniConnector for WhatsApp, Facebook Messenger, and more
+- [Collab Suite](/collab-suite): Collaboration Suite featuring Quality Manager with call recording and agent improvement tools
+- [Virtual Agents](/virtual-agents): AI-powered virtual agents with Dialogflow integration and NLP capabilities
+
+## Cloud Modules
+
+- [Analytics Module](/cloverhound-cloud/analytics-module): Contact center analytics and reporting
+- [Campaign Manager](/cloverhound-cloud/campaign-manager): Outbound campaign management
+- [Operations Control Portal](/cloverhound-cloud/operations-control-portal): Real-time operations management
+- [Monitoring Module](/cloverhound-cloud/monitoring-module): Infrastructure and service monitoring
+
+## Services
+
+- [Professional Services](/services): Unified communications consulting, implementation, and support
+- [Managed Services](/managed-services): Ongoing IT management with people, processes, and products approach
+- [API Integration](/api-integration): Custom API integrations and development services
+- [Amazon Connect](/amazon-connect): Amazon Connect implementation and migration services
+
+## Partnerships
+
+- [Cisco](/cisco): Cisco certified partner for collaboration and contact center solutions
+- [Finesse](/finesse): Cisco Finesse integrations with Salesforce, Zendesk, and ticketing systems
+
+## Industry Solutions
+
+- [Healthcare](/healthcare): Contact center solutions for healthcare organizations
+- [Connect for Healthcare](/connect-2/healthcare): Cloverhound Connect tailored for healthcare
+- [Connect for Courts](/connect-2/courts): Cloverhound Connect tailored for court systems
+
+## Company
+
+- [Team](/cloverhound-team): Leadership and team members across Charlotte NC, Denver CO, and Costa Rica offices
+- [Contact](/get-in-touch): Contact information and office locations
+- [Software Access](/access): Product downloads for Vigilus, OmniSuite, Connect, and Finesse
+
+## Optional
+
+- [Resources](/form-for-resources): Gated resources and downloads
+- [Privacy Policy](/privacy-policy): Privacy policy
+- [EULA](/eula): End User License Agreement
