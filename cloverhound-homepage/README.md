@@ -1,22 +1,27 @@
 # Homepage static demo
 
-Self-contained build of the English homepage. Copy this entire folder into a demo repo.
-
-Regenerate from the main site project:
+Self-contained English homepage. Copy **everything in this folder** to your demos repo (including hidden files).
 
 ```bash
+# From the main webpage repo root:
 pnpm run build:github-pages-demo
 ```
 
-## View it
+## Deploy checklist
 
-Use any static server at **this folder’s root** (opening `index.html` directly in the browser will not load JS modules):
+Upload/deploy the **full folder**, not only `index.html`:
+
+- `index.html`
+- `.nojekyll` (required — or GitHub/Jekyll ignores `_astro/` and CSS never loads)
+- `_astro/`
+- `images/`
+- favicons at the root
+
+## View locally
 
 ```bash
 npx serve .
 # http://localhost:3000/
 ```
 
-Or from the main repo: `pnpm run preview:homepage-demo`
-
-Includes `index.html`, `_astro/`, `images/`, and favicons only. In-site nav links point at routes that are not shipped in this demo.
+From the main repo: `pnpm run preview:homepage-demo`
